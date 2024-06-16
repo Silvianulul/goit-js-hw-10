@@ -66,7 +66,6 @@ function fetchDescription(breed) {
   axios
     .get(`${catApi}/breeds`)
     .then(res => {
-      //   console.log(res);
       console.log(res.data);
 
       res.data.find(cat => {
@@ -87,23 +86,17 @@ function fetchDescription(breed) {
 
 function renderDescription(cat) {
   const descriptionContainer = document.createElement('div');
-
   const name = document.createElement('h2');
   name.textContent = cat.name;
   name.style.margin = '0px';
   name.textContent = cat.name;
-
   const description = document.createElement('p');
   description.textContent = cat.description;
-
   const temperament = document.createElement('p');
   temperament.textContent = cat.temperament;
-
   const bold = document.createElement('b');
   bold.textContent = 'Temperament:';
-
   temperament.prepend(bold);
-
   descriptionContainer.append(name, description, temperament);
   catInfo.append(descriptionContainer);
 }
