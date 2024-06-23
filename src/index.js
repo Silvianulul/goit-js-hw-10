@@ -100,3 +100,5 @@ function renderDescription(cat) {
   descriptionContainer.append(name, description, temperament);
   catInfo.append(descriptionContainer);
 }
+
+////
